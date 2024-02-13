@@ -1,0 +1,45 @@
+body{
+    margin:0;   /* 원래 기본 background는 margin이 8이다. */
+    background-image: url("/images/background.jpg");  /* css에서 이미지 가져오기 */
+    background-repeat: no-repeat; /* 공간채우기위해 여러개 들어가는 것을 금지, 한개만 */
+    background-size: cover; /* cover는 검색해보기 */
+}
+
+
+.container{
+    background-color: #F2F2F2; 
+    min-height: 100vh; /* 내가 보는 화면에 무조건 최소 100% */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; /* 구글링 */
+}
+
+
+
+.task-area{
+    border:1px solid lightgray; /* tabs에다 줘도 같은데 확실히 나누기 */
+    margin-top :2em;
+}
+.task-tabs{
+    display: flex; /* 세로->가로 (무조건 부모 요소에게만) */
+    border-bottom:1px solid lightgray; /* tabs에다 줘도 같은데 확실히 나누기 */
+    position: relative; /* absolute는 기준점이 필요해서 relative */
+}
+.task-tabs div{
+    padding: 1em; /* div 패딩 1em주기 */
+}
+
+#under-line{
+    height : 4px;
+    background-color: turquoise ;
+    position : absolute; /* absolute는 기준점이 필요 relative */
+    width:70px;
+    left:0px;
+    top:52px;
+    padding: 0px;   /* div는 기본 패딩이 있어서 0px로 일단 두기 */
+}
+
+.task-list{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+/* */
