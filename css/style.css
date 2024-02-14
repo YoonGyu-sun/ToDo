@@ -38,8 +38,27 @@ body{
 }
 
 .task-list{
+    margin-top :30px;
     display: flex;
     justify-content: space-between;
     padding-bottom: 20px;
+    
 }
+
+.task-done {       /* main.js에서 중간줄 class */
+    text-decoration: line-through;
+}
+.task-done-background {       /* 배경화면 회색주기 */
+    background-color: #ced4da;
+    width: 550px;
+    height: 50px;
+    
+}
+
+
+.emoji-button {
+    margin-bottom :5px;
+    font-size: 24px; /* 이모지의 크기 조절 */
+}
+
 /* */
