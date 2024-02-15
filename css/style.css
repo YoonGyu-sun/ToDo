@@ -61,4 +61,8 @@ body{
     font-size: 24px; /* 이모지의 크기 조절 */
 }
 
+.task-tabs{
+    cursor: pointer;
+}
+
 /* */
