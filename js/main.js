@@ -123,13 +123,13 @@ function filter(event){
     
     switch(mode) { // id값 구분
         case "all":
-            underline.style.left = '0px'; 
+            underline.style.left = '200px'; 
             break;
         case "notdone":
-            underline.style.left = (1 * shift) + 'px'; 
+            underline.style.left = (1 * shift +190) + 'px'; 
             break;
         case "done":
-            underline.style.left = (2 * shift) + 'px';
+            underline.style.left = (2 * shift +190) + 'px';
             break;
     }
 

@@ -5,10 +5,19 @@ body{
     background-size: cover; /* cover는 검색해보기 */
 }
 
+.main{
+    text-align: center;
+}
+
+h1 {
+    font-weight: bold;
+    font-family: Arial, sans-serif; /* 원하는 글꼴로 변경 가능합니다. */
+  }
 
 .container{
     background-color: #F2F2F2; 
     min-height: 100vh; /* 내가 보는 화면에 무조건 최소 100% */
+    
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; /* 구글링 */
 }
 
@@ -17,8 +26,10 @@ body{
 .task-area{
     border:1px solid lightgray; /* tabs에다 줘도 같은데 확실히 나누기 */
     margin-top :2em;
+    
 }
 .task-tabs{
+    padding-left:200px;
     display: flex; /* 세로->가로 (무조건 부모 요소에게만) */
     border-bottom:1px solid lightgray; /* tabs에다 줘도 같은데 확실히 나누기 */
     position: relative; /* absolute는 기준점이 필요해서 relative */
@@ -32,7 +43,7 @@ body{
     background-color: turquoise ;
     position : absolute; /* absolute는 기준점이 필요 relative */
     width:70px;
-    left:0px;
+    left:200px;
     top:52px;
     padding: 0px;   /* div는 기본 패딩이 있어서 0px로 일단 두기 */
 }
