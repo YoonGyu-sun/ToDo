@@ -6,7 +6,16 @@ let taskList=[];
 let mode = "all";
 let filterList=[];
 
+taskInput.addEventListener('keypress', function(event){
+    if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById("add-button").click();
+    }
+});
+
+
 addButton.addEventListener('click', addTask); // 버튼 클릭 시 event
+
 
 
 for(let i=1; i<tabs.length; i++){
@@ -92,12 +101,39 @@ function deleteTask(id){
             break;
         }
     }
+    filterList = taskList.filter(function(task){
+        if(mode === "notdone"){
+            return !task.isComplete;
+        } else if(mode === "done"){
+            return task.isComplete;
+        } else {
+            return true; // "all" 모드에서는 모든 task를 포함합니다.
+        }
+    });
     render();
 }
 
 function filter(event){
     // console.log("filter", event.target.id);
+    
     mode = event.target.id;
+    
+    var underline = document.getElementById('under-line');
+    var shift = 90;
+    
+    switch(mode) { // id값 구분
+        case "all":
+            underline.style.left = '0px'; 
+            break;
+        case "notdone":
+            underline.style.left = (1 * shift) + 'px'; 
+            break;
+        case "done":
+            underline.style.left = (2 * shift) + 'px';
+            break;
+    }
+
+
     filterList = []; // 진행중 또는 진행되지 않은 것들만 선택하기 위한 배열
         if( mode == "all"){
             render();
